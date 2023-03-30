@@ -12,4 +12,4 @@ def purchase_product(product_type, price, mobile_brand = None):
 
 purchase_product("Mobile", 20000, "Apple")
 purchase_product("Shoe", 200)
-                                                
+                                                 
