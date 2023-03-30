@@ -1,0 +1,94 @@
+Python Recap:
+*Dynamic Programming Language
+*Operator Overload
+*Positional Arguments, which parameters are going to be allocated to
+*Int and Str cannot be added together
+*Segregation --> Creating 2 different functions for different produces eg.
+*Global Variables
+*2 Entities in functional domains: Data (Price, Material) and Behaviour (Purchase, Return)
+Classes to procure from both entities available
+Objects are instances for class, class are templatesfor objects
+
+Reference Variables = Objects --> mob1 = Mobile()
+It should have at least one parameter, otherwise it will return error
+object.behaviour
+
+1) Classes and Objects
+
+Pass == No Operations will be executed. Run on codes with no proper indentation
+
+We can access the attribute values using the dot operator itself. The syntax is as shown below:
+reference_variable.attribute_name
+
+In python, we can create attributes for a specific object alone
+We can update the value of an existing attribute using the dot operator. For example, the below code will change the ios_version of mob1 object, since the mob1 object already has that attribute.
+
+Calling an undeclared variable --> Attribute Error
+
+*Variable vs Attribute --> Variable = 5; var1.color = "Red"
+var1 = var2 (variable); var1 = attribute.var (Attribute)
+Printing an object without reference variable will result in NameError
+
+Best practice is to ensure all objects of a class have the same set of attributes
+Very rarely should we create separate set of attributes for different objects
+Only Python can create different set of attributes for different objects as opposed to Java or C#
+
+2) Self, Constructors & Methods:
+
+- Constructor is a function for __init__ class variable
+- Abstraction is taking the minimum required thing to make another class?
+- When we create an object, the special __init__() method inside the class of that object is invoked automatically
+
+self.__wallet_balance
+
+class Mobile:
+    def __init__(self, brand, price):  [self is keyword, brand is positional arguments, price is positional arguments]
+        print("Inside constructor")
+mob1=Mobile()
+** self is not a keyword. self refers to the current object being executed
+
+- Everything is treated as an object including list, tuples etc.
+- Value of the attribute accessed inside the method is determined by the object used to invoke the method
+- You can invoke another function by accessing the constructor attribute values
+- Eg of method invocation:
+	mob1.display()
+	mob1.purchase()
+*The first parameter of a method is always a reference to the object used, hence it should have AT LEAST one parameter
+*Method vs Functions
+
+3) Reference Variable:
+- Reference variables hold the objects
+- We can create objects without reference variable as well
+- An object can have multiple reference variables
+- Assigning a new reference variable to an existing object does not create a new object
+
+4) OOP
+** Naming Conventions, Variable Names and Method names are in snake_case
+** Class names should be in PascalCase
+
+Classes --> Mobile; RegularCustomer
+Methods --> change_password(); display_details()
+Variables --> price = 1000; brand = "Samsung"
+
+To print out an object, you must declare the reference variable as you print out
+eg. print(s1.price, s1.material) instead of print(s1)
+
+__str__:
+For a more readable output when printing an object we can use the inbuilt special __str__ method
+This method MUST return a string and this string will be used when the object is printed
+
+5) Abstraction & Encapsulation:
+Abstraction --> Invoking a method on an object without having details of how it is working
+Encapsulation --> Private attributes__ are those which are accessible only inside the class
+Private Attributes are not accessible outside of its Class. You cannot invoke the attribute but you can invoke its Method
+
+Accessing Private Variables --> We can access it using modified names
+Private Variable can be accessed outside and can be modified
+
+Python Encapsulation --> Think of it as a Warning Sign:
+You can do it, but its better for you to follow and not go beyond boundary
+
+6) Getters and Setters
+'-': Private Properties
+'+': Public Properties
+We can create private methods by adding double underscores before and after the variable

@@ -1,0 +1,73 @@
+** Creating Objects which have some relationship with other objects
+- Object may relate with multiple objects at same time
+
+1) Aggregation:
+Eg. If class A owns class B then A is said to aggregate class B
+Also known as "has-A" relationship
+
+For Customer Class to aggregate the Address class, it needs full access of the Address Class
+
+Eg.
+
+add1=Address(123,"5th Lane",56001); cus1=Customer("Jack",24,1234,add1)
+add2=Address(567,"6th Lane",82006); cus2=Customer("Jane",25,5678,add2)
+
+Private variables cannot be accessed outside the class
+The owning class cannot access the private attributes of aggregated class directly
+
+Only when we have appropriate accessor (Getter) and mutator (Setter) methods:
+We can access the private variables of aggregated class using those methods
+
+2) Dependency:
+A class may depend on another class for its use
+eg.  the Customer class depends on a payment object for purchasing where payment is a local variable
+
+Object is being passed as a parameter to the method
+We can also create objects locally inside a method.
+We may access static values of another class directly in our method
+
+3)Inheritance: 
+
+eg. Feature phone and Smart Phone are inheriting from Phone Class
+We can keep common properties in single place
+Any changes needs to be made need not repeated
+Code reused hence saving us time
+If we want add new type of phone, we can just simply inherit the Phone class
+
+Phones is a parent class of FeaturePhone and SmartPhone
+
+Attributes and behaviours gets inherited just like child inherit certain attributes from its parent
+Eg. Child class inherits:
+- Non private Attributes (public/ protected will be available to child class)
+- Non private Methods (public/ protected will be available to child class)
+- Constructor
+- A child class cannot directly access private attributes of parent class
+
+4) super() class constructor --> To be able to access the Parent Class
+super() builtin returns a proxy object (temp object of superclass)
+
+A child class will call the super() class constructor
+Parents have no access to the child class
+Private properties of parents are not accessible directly in child class
+
+5) Inheritance Levels:
+- Single Level: One Level (Single Parent Single Child)
+- Multi Level: 2 or more levels
+- Hierarchical: Hierarchy (One Parent Many Children)
+- Multiple: One level can branch out to multiple levels (One Child, Multiple Parent)
+- Polymorphism
+
+RunTimeError: Max recursion depth exceeded
+
+6) Abstract Class:
+Product Class would not represent a real world object as Product is just an abstract concept
+Product is a minimal specification of items
+Best Practice is not to create object of the parent class
+
+An Abstract Class should not have been instantiated; Abstract Class is a guide and a template
+Product = Creates an object of Mobile and Shoe; Best Practice not to create object of parent class
+Instantiation: Creation of Object from that class
+Every Product has got a return policy
+
+@abstractmethod
+Child classes must implement/override all abstact methods of the parent class. Else child class cannot be instantiated

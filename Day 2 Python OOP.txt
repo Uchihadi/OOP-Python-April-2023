@@ -1,0 +1,50 @@
+Day 2 Python OOP
+
+1) Pass By Reference
+- Passing an object as a parameter to a function, parameter name becomes a reference variable
+- Parameter arguments can be overwritten
+
+2) Collection of Objects
+- Class structure gives the outline of the class you are coding in Eclipse
+
+3) Static & Reference Variables
+- Calculations in referential methods
+- Need a way to make an attribute shared across objects
+- Data is shared by all objects, not owned by each object. 
+- Thus, by making a single change, it should reflect in all objects at one go. 
+
+Static Variables:
+- We can create shared attributes by placing them directly inside the class and not inside the constructor.
+- this attribute is not owned by any one object
+- we don’t need the self to create this attribute
+- We can update the static value using the class name (Getter, Setter method)
+- Static variable belongs to the class, therefore is incorrect to update/access them using reference variable
+- Static variable can be made into a private + static variable by adding "__" in front of static variable
+
+- @staticmethod: Methods that can be accessed without an object using getter and setter
+- Possible by creating static methods (can be accessed without an object)
+- Accessed using Class Name
+- 2 rules --> Methods should not have *self* & @staticmethod must be written on top of it
+
+- Instance variable: Inside a constructor
+- Local Variable: Variable inside a method (Defined a particular scope)
+- Static Variable: Declared only after the class
+- Static Method can only access Static instances / variables
+- Call a constructor in another class [eg. Util()] if variable [eg. Util] has not been designated as a static
+
+- Static attributes are created at class level.
+- Static attributes are accessed using ClassName.
+- Static attributes are object independent. We can access them without creating instance (object) of the class in which they are defined.
+- The value stored in static attribute is shared between all instances(objects) of the class in which the static attribute is defined.
+
+4) Class Relationships
+- Inheritance: Object is a type of another object
+- Aggregation: One objects owns another object, but both have independent life cycle (One dies another lives)
+- Composition: One object owns another object, but both have same life cycle (eg One dies another dies)
+
+- Aggregation eg. cust1.address.door
+
+Hyperlink:
+- Passing By Assignment (https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference)
+- Pass By Reference (https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference)
+- Writing Style (https://python-guide-chinese.readthedocs.io/zh_CN/latest/writing/style.html#we-are-all-consenting-adults)
