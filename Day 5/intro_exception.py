@@ -8,7 +8,7 @@ class Customer:
     def purchase_item(self, price, card_no):
         if price < 0:
             raise Exception()
-        if card_no not in self.cards:
+        if card_no not in self.cards: #Strings, Lists, Dictionaries
             raise Exception()
         if price>self.cards[card_no].balance:
             raise Exception()
@@ -17,7 +17,7 @@ card2=CreditCard(102,2000)
 cards={card1.card_no:card1,card2.card_no:card2}
 c=Customer(cards)
 while(True):
-    card_no=int(input("Please enter a card number"))
+    card_no=int(input("Please enter a card number")) #The int is so that the user input will be in the Integer typ
     try:
         c.purchase_item(1200,card_no)
         break
