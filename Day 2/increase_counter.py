@@ -4,7 +4,7 @@ class Mobile:
         self.price = price
         self.brand = brand
         self.mobile_id = Mobile.counter #Creating a variable for a counter
-        Mobile.counter += 1
+        Mobile.counter += 1 #Refer statice variable always with the className
 
 mob1=Mobile(20000, "Apple")
 mob2=Mobile(30000, "Apple")
